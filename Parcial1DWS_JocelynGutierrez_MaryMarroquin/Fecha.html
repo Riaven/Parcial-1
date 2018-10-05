@@ -1,0 +1,244 @@
+	<!DOCTYPE html>
+	<html>
+	<head>
+
+		<meta charset="utf-8">
+		<!--Import Google Icon Font-->
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<!--Import materialize.css-->
+		<link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+
+
+		<!--Let browser know website is optimized for mobile-->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<title></title>
+		<script type="text/javascript" src="Script.js"></script>
+
+	</head>
+
+
+	<body  >
+		
+
+
+		<div class="container">
+
+
+			<!-- TITULO	 -->
+			<div class="row" align="center">
+				<div class="col s12 m3"></div>
+				<div class="col s12 m6">
+					<form >
+						<div >
+							<h3>Bienvenido</h3>
+							<h4>Complete los datos</h4>
+						</div>
+					</form>
+				</div>
+			</div>
+
+
+
+			<!-- Digitar correo -->
+			<div class="row">
+				<div class="col s12 m3"></div>
+				<div class="col s12 m6">
+					<form >
+						<div class="input-field">
+							<input type="email" id= "email" name="email" class="validate">
+							<label for="nombre">E-mail</label>
+						</div>
+					</form>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col s12 m3"></div>
+				<div class="col s12 m6">
+					<form >
+						<div class="input-field">
+							<input type="text" id= "rut" name="rut" required onblur="checkRut(this)";" maxlength="10">
+							<label for="nombre">R.U.N.</label>
+						</div>
+					</form>
+				</div>
+			</div>
+
+
+
+
+			<!-- Digitar nombre -->
+			<div class="row">
+				<div class="col s12 m3"></div>
+				<div class="col s12 m6">
+					<form >
+						<div class="input-field">
+							<input type="text" id= "nombre" name="nombre" onkeyup="lettersOnly(this);">
+							<label for="nombre">Nombre completo</label>
+						</div>
+					</form>
+				</div>
+			</div>
+
+
+
+			<!-- Seleccionar la fecha -->
+			<div class="row">
+				<div class="col s12 m3"></div>
+				<div class="col s12 m6">
+					<form >
+						<div class="input-field" >
+
+							<!-- Calendario -->
+							<input type="text" id = "calendario" class="datepicker">
+							<!-- Label muestra info en picker -->
+							<label for="calendario"> Fecha de nacimiento</label>
+						</div>
+
+					</form>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col s12 m3"></div>
+				<div class="col s12 m6">
+					<form >
+						<div class="input-field">
+							<input type="text" id= "telefono" name="telefono" onkeyup="numeros(this);">
+							<label for="nombre">Teléfono de contacto</label>
+						</div>
+					</form>
+				</div>
+			</div>
+
+			<!-- Seleccion de ciudad de origen-->
+
+			<div class="row">
+				<div class="col s12 m3"></div>
+
+				<div class="col s3 m3">
+					<form >
+						<label>Región</label>
+						<select class="browser-default">
+							<option value="" disabled selected>Seleccione Región</option>
+							<option value="1">Arica y Parinacota(XV)</option>
+							<option value="2">Tarapacá(I)</option>
+							<option value="3">Antofagasta(II)</option>
+							<option value="4">Atacama(III)</option>
+							<option value="5">Coquimbo(IV)</option>
+							<option value="6">Valparaíso(V)</option>
+							<option value="7">Metropolitana(RM)</option>
+							<option value="8">O'Higgins(VI)</option>
+							<option value="9">Maule(VII)</option>
+							<option value="10">Biobío(VIII)</option>
+							<option value="11">Araucanía(IX)</option>
+							<option value="12">Los Rios(XIV)</option>
+							<option value="13">Los Lagos(X)</option>
+							<option value="14">Aysén(XI)</option>
+							<option value="15">Magallanes(XII)</option>
+
+						</select>
+
+					</form>
+				</div>
+				<!-- Seleccion de ciudad de destino-->
+				<div class="col s6 m3 ">
+					<form >
+						<label>Ciudad</label>
+						<select class="browser-default">
+							<option value="" disabled selected>Seleccione Ciudad</option>
+							<option value="1">Arica</option>
+							<option value="2">Iquique</option>
+							<option value="3">Calama</option>
+							<option value="4">Tocopilla</option>
+							<option value="5">La Serena</option>
+							<option value="6">Los Vilos</option>
+							<option value="7">El Quisco</option>
+							<option value="8">San Antonio</option>
+							<option value="9">San Bernardo</option>
+							<option value="10">La Florida</option>
+							<option value="11">Peumo</option>
+							<option value="12">Talca</option>
+							<option value="13">Chillan</option>
+							<option value="14">Pucón</option>
+							<option value="15">Los Lagos</option>
+							<option value="16">Castro</option>
+							<option value="17">Coyhaique</option>
+							<option value="18">Punta Arenas</option>
+						</select>
+
+					</form>
+				</div>	
+			</div>
+
+			<div class="row">
+				<div class="col s12 m3"></div>
+				<div class="col s3 m6">
+					<form >
+						<label>Tipo de Vivienda</label>
+						<select class="browser-default">
+							<option value="" disabled selected>Seleccione Vivienda</option>
+							<option value="1">Casa con patio grande</option>
+							<option value="2">Casa con patio pequeño</option>
+							<option value="3">Casa sin patio</option>
+							<option value="4">Departamento</option>
+						</select>
+
+					</form>
+				</div>
+			</div>
+
+
+			<div class="row" align="center">
+				<div class="col s12 m3"></div>
+				<div class="col s12 m6">
+					<form >
+						<div >
+							<a onclick="myFunction()" href="MisPerris - Prueba.html" class="waves-effect waves-light btn">Aceptar</a>
+						</div>
+					</form>
+				</div>
+			</div>
+
+			<script>
+				function myFunction() {
+					alert("Gracias por comunicarte con nosotros!");
+				}
+			</script>
+
+			<!--JavaScript at end of body for optimized loading-->
+			<script type="text/javascript" src="js/materialize.min.js"></script>
+
+			<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+
+
+
+
+
+			<!--JavaScript at end of body for optimized loading-->
+			<script type="text/javascript" src="js/materialize.min.js"></script>
+
+			<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+
+			<!-- Iniciar calendario -->
+			<script type="text/javascript">
+				const Calender = document.querySelector('.datepicker');
+	       M.Datepicker.init(Calender,{format:'dd/mmmm/yyyy', //cambia el formato de la fecha
+	                                     //muestra el boton limpiar
+	                                     showClearBtn:true,
+	                                     i18n:{
+	                                   //cambia el nombre de los botones correspondientes
+	                                   clear : 'Limpiar',
+	                                   done: 'Hecho',
+	                                   cancel: 'Cancelar',
+	                                   minDate: new Date(2018, 9, 12)
+	                               }
+	                           });
+
+
+
+	                       </script>
+
+	                   </body>
+	                   </html>
+
